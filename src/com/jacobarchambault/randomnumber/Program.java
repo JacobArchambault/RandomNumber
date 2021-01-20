@@ -15,11 +15,9 @@ import javax.swing.JOptionPane;
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		File file = new File(
 				"Ch11Lab1File.txt");
 
-		int ch;
 
 		// The StringBuffer class allows you to append to a string of characters
 		StringBuffer strContent = new StringBuffer(
@@ -59,6 +57,7 @@ public class Program {
 					file);
 			// while there is anything to read through the FileInputStream append to the
 			// StringBuffer
+			int ch;
 			while ((ch = fin.read()) != -1) {
 				strContent.append((char) ch);
 			}
