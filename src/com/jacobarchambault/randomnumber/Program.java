@@ -26,32 +26,21 @@ public class Program {
 		// The FileInputStreamclass reads the input supplied by the file class
 		FileInputStream fin = null;
 
-		try {
-			// Construct a Formatter object that uses the FileOutputStream class to link to
-			// the text file
-			// to be downloaded to
-			Formatter output = new Formatter(
-					new FileOutputStream(
-							file,
-							true));
-
-			// Generate 100 random numbers
-			for (int i = 0; i < 100; i++) {
-				output.format("%d",
-						(int) (Math.random() * 100000)); // The %d formats to an integer
-
-			}
-			// always close the streawm
-			output.close();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null,
-					"Error creatingfile");
-		}
+		method1(file);
 
 		// notify the user that the download is complete.
 		JOptionPane.showMessageDialog(null,
 				"Output Complete");
 
+		method2(file,
+				strContent);
+
+		System.out.println(strContent);
+	}
+
+	private static void method2(File file,
+			StringBuffer strContent) {
+		FileInputStream fin;
 		try {
 			fin = new FileInputStream(
 					file);
@@ -69,7 +58,29 @@ public class Program {
 		} catch (IOException ioe) {
 			System.out.println("Error reading the file" + ioe);
 		}
+	}
 
-		System.out.println(strContent);
+	private static void method1(File file) {
+		try {
+			// Construct a Formatter object that uses the FileOutputStream class to link to
+			// the text file
+			// to be downloaded to
+			Formatter output = new Formatter(
+					new FileOutputStream(
+							file,
+							true));
+
+			// Generate 100 random numbers
+			for (int i = 0; i < 100; i++) {
+				output.format("%d",
+						(int) (Math.random() * 100000)); // The %d formats to an integer
+
+			}
+			// always close the stream
+			output.close();
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null,
+					"Error creatingfile");
+		}
 	}
 }
