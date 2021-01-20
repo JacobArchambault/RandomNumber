@@ -31,30 +31,6 @@ public class Program {
 
 	}
 
-	private static void method2(File file) {
-		StringBuffer strContent = new StringBuffer(
-				"");
-		FileInputStream fin;
-		try {
-			fin = new FileInputStream(
-					file);
-			// while there is anything to read through the FileInputStream append to the
-			// StringBuffer
-			int ch;
-			while ((ch = fin.read()) != -1) {
-				strContent.append((char) ch);
-			}
-			// close the stream
-			fin.close();
-		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null,
-					"File Not Found. Check the name of the file.");
-		} catch (IOException ioe) {
-			System.out.println("Error reading the file" + ioe);
-		}
-		System.out.println(strContent);
-	}
-
 	private static void method1(File file) {
 		try {
 			// Construct a Formatter object that uses the FileOutputStream class to link to
@@ -77,5 +53,29 @@ public class Program {
 			JOptionPane.showMessageDialog(null,
 					"Error creatingfile");
 		}
+	}
+
+	private static void method2(File file) {
+		StringBuffer strContent = new StringBuffer(
+				"");
+		FileInputStream fin;
+		try {
+			fin = new FileInputStream(
+					file);
+			// while there is anything to read through the FileInputStream append to the
+			// StringBuffer
+			int ch;
+			while ((ch = fin.read()) != -1) {
+				strContent.append((char) ch);
+			}
+			// close the stream
+			fin.close();
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null,
+					"File Not Found. Check the name of the file.");
+		} catch (IOException ioe) {
+			System.out.println("Error reading the file" + ioe);
+		}
+		System.out.println(strContent);
 	}
 }
