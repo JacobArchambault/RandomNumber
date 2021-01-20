@@ -20,8 +20,6 @@ public class Program {
 
 
 		// The StringBuffer class allows you to append to a string of characters
-		StringBuffer strContent = new StringBuffer(
-				"");
 
 		method1(file);
 
@@ -29,14 +27,13 @@ public class Program {
 		JOptionPane.showMessageDialog(null,
 				"Output Complete");
 
-		method2(file,
-				strContent);
+		method2(file);
 
-		System.out.println(strContent);
 	}
 
-	private static void method2(File file,
-			StringBuffer strContent) {
+	private static void method2(File file) {
+		StringBuffer strContent = new StringBuffer(
+				"");
 		FileInputStream fin;
 		try {
 			fin = new FileInputStream(
@@ -55,6 +52,7 @@ public class Program {
 		} catch (IOException ioe) {
 			System.out.println("Error reading the file" + ioe);
 		}
+		System.out.println(strContent);
 	}
 
 	private static void method1(File file) {
