@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 /*  Purpose:  Demonstrate the Formatter, FileInputStream, File, FileOutputStream, 
  *  StringBuffer classes.
  */
-public class Ch11Lab1 {
+public class Program {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
