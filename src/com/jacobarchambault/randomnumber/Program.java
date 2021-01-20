@@ -16,15 +16,12 @@ public class Program {
 
 	public static void main(String[] args) {
 		File file = new File(
-				"Ch11Lab1File.txt");
+				"numbers.txt");
 
 
 		// The StringBuffer class allows you to append to a string of characters
 		StringBuffer strContent = new StringBuffer(
 				"");
-
-		// The FileInputStreamclass reads the input supplied by the file class
-		FileInputStream fin = null;
 
 		method1(file);
 
