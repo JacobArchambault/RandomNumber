@@ -11,7 +11,7 @@ import java.util.Random;
 public class Program {
 
 	public static void main(String[] args) throws IOException {
-		new GuardedNumbersFile(new RandomNumbersFile(new FileWriter(new File("numbers.txt")),
+		new GuardedRandomNumbersFile(new RandomNumbersFile(new FileWriter(new File("numbers.txt")),
 				new RandomNumberString(new StringBuilder(), new Random()))).tryWriteNumbers();
 		new GuardedConsole(new MyConsole("numbers.txt")).tryWriteToConsole();
 	}
