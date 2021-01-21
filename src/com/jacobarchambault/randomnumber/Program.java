@@ -16,16 +16,9 @@ import javax.swing.JOptionPane;
 public class Program {
 
 	public static void main(String[] args) {
-		File toFile = new File(
-				"numbers.txt");
-
-		tryWriteNumbers(toFile);
-
-		// notify the user that the download is complete.
+		tryWriteNumbers("numbers.txt");
 		showMessage();
-
 		tryWriteToConsole("numbers.txt");
-
 	}
 
 	private static void showMessage() {
@@ -33,9 +26,9 @@ public class Program {
 				"Output Complete");
 	}
 
-	private static void tryWriteNumbers(File file) {
+	private static void tryWriteNumbers(String filePath) {
 		try {
-			write100RandomNumbers(file);
+			write100RandomNumbers(filePath);
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null,
 					"Error creatingfile");
@@ -54,9 +47,9 @@ public class Program {
 		}
 	}
 
-	private static void write100RandomNumbers(File toFile) throws IOException {
-		FileWriter writer = new FileWriter(
-				toFile);
+	private static void write100RandomNumbers(String toFile) throws IOException {
+		FileWriter writer = new FileWriter(new File(
+				toFile));
 		Random random = new Random();
 		StringBuilder stringBuilder = new StringBuilder();
 		// Generate 100 random numbers
