@@ -18,18 +18,8 @@ public class Program {
 	public static void main(String[] args) throws IOException {
 		new GuardedNumbersFile(new NumbersFile(new FileWriter(new File("numbers.txt")),
 					new RandomNumberString(new StringBuilder(), new Random()))).tryWriteNumbers();
-		tryWriteToConsole("numbers.txt");
+		GuardedConsole.tryWriteToConsole("numbers.txt");
 	}
 
-	private static void tryWriteToConsole(String filePath) {
-		// The StringBuffer class allows you to append to a string of characters
-		try {
-			new MyConsole(filePath).writeTo();
-		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "File Not Found. Check the name of the file.");
-		} catch (IOException ioe) {
-			System.out.println("Error reading the file" + ioe);
-		}
-	}
 
 }
