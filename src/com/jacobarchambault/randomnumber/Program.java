@@ -28,7 +28,7 @@ public class Program {
 	private static void tryWriteNumbers(String filePath) {
 		try {
 			new NumbersFile(new FileWriter(new File(
-				filePath))).write100RandomNumbers(filePath);;
+				filePath))).write100RandomNumbers();;
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null,
 					"Error creatingfile");

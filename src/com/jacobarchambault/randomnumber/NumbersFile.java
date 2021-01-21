@@ -11,7 +11,7 @@ public class NumbersFile {
 	public NumbersFile(FileWriter writer) {
 		this.writer = writer;
 	}
-	void write100RandomNumbers(String toFile) throws IOException {
+	void write100RandomNumbers() throws IOException {
 		Random random = new Random();
 		StringBuilder stringBuilder = new StringBuilder();
 		// Generate 100 random numbers
