@@ -25,7 +25,7 @@ public class Program {
 		// notify the user that the download is complete.
 		showMessage();
 
-		method2(toFile);
+		writeToConsole(toFile);
 
 	}
 
@@ -40,13 +40,13 @@ public class Program {
 		}
 	}
 
-	private static void method2(File file) {
+	private static void writeToConsole(File fromFile) {
 		// The StringBuffer class allows you to append to a string of characters
 		StringBuffer strContent = new StringBuffer();
 		FileInputStream fin;
 		try {
 			fin = new FileInputStream(
-					file);
+					fromFile);
 			// while there is anything to read through the FileInputStream append to the
 			// StringBuffer
 			int ch;
