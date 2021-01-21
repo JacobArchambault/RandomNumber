@@ -15,8 +15,9 @@ import javax.swing.JOptionPane;
  */
 public class Program {
 
-	public static void main(String[] args) {
-		GuardedNumbersFile.tryWriteNumbers("numbers.txt");
+	public static void main(String[] args) throws IOException {
+		new GuardedNumbersFile(new NumbersFile(new FileWriter(new File("numbers.txt")),
+					new RandomNumberString(new StringBuilder(), new Random()))).tryWriteNumbers();
 		showMessage();
 		tryWriteToConsole("numbers.txt");
 	}

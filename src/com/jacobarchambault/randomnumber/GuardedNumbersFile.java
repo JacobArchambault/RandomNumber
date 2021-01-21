@@ -8,10 +8,13 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class GuardedNumbersFile {
-	static void tryWriteNumbers(String filePath) {
+	NumbersFile file;
+	public GuardedNumbersFile(NumbersFile file) {
+		this.file = file;
+	}
+	void tryWriteNumbers() {
 		try {
-			new NumbersFile(new FileWriter(new File(filePath)),
-					new RandomNumberString(new StringBuilder(), new Random())).write100RandomNumbers();
+			file.write100RandomNumbers();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Error creatingfile");
 		}
