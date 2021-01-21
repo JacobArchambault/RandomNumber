@@ -5,15 +5,15 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 class GuardedNumbersFile {
-	NumbersFile file;
+	RandomNumbersFile file;
 
-	GuardedNumbersFile(NumbersFile file) {
+	GuardedNumbersFile(RandomNumbersFile file) {
 		this.file = file;
 	}
 
 	void tryWriteNumbers() {
 		try {
-			file.write100RandomNumbers();
+			file.write();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Error creatingfile");
 		}
