@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Formatter;
+import java.util.Random;
 
 import javax.swing.JOptionPane;
 
@@ -40,11 +41,13 @@ public class Program {
 							file,
 							true));
 
+			Random random = new Random();
 			// Generate 100 random numbers
 			for (int i = 0; i < 100; i++) {
 				output.format("%d",
-						(int) (Math.random() * 100000)); // The %d formats to an integer
+						(random.nextInt())); // The %d formats to an integer
 
+				
 			}
 			// always close the stream
 			output.close();
