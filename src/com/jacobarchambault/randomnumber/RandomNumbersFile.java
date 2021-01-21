@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-class RandomNumbersFile implements Writer {
+class RandomNumbersFile implements Medium {
 
 	private static void showMessage() {
 		JOptionPane.showMessageDialog(null, "Output Complete");

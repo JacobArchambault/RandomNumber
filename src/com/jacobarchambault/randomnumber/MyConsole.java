@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-class MyConsole implements Writer {
+class MyConsole implements Medium {
 	String filePath;
 
 	MyConsole(String filePath) {
