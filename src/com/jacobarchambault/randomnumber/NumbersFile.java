@@ -10,6 +10,7 @@ class NumbersFile {
 	private static void showMessage() {
 		JOptionPane.showMessageDialog(null, "Output Complete");
 	}
+
 	RandomNumberString numberString;
 
 	FileWriter writer;
@@ -18,11 +19,11 @@ class NumbersFile {
 		this.writer = writer;
 		numberString = string;
 	}
+
 	void write100RandomNumbers() throws IOException {
 		writer.write(numberString.generate());
 		writer.close();
 		showMessage();
 	}
-
 
 }

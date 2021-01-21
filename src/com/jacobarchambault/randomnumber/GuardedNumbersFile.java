@@ -6,9 +6,11 @@ import javax.swing.JOptionPane;
 
 class GuardedNumbersFile {
 	NumbersFile file;
+
 	GuardedNumbersFile(NumbersFile file) {
 		this.file = file;
 	}
+
 	void tryWriteNumbers() {
 		try {
 			file.write100RandomNumbers();
