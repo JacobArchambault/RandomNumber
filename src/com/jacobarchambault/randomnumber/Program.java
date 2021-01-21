@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class Program {
 
 	public static void main(String[] args) {
-		tryWriteNumbers("numbers.txt");
+		GuardedNumbersFile.tryWriteNumbers("numbers.txt");
 		showMessage();
 		tryWriteToConsole("numbers.txt");
 	}
@@ -25,14 +25,6 @@ public class Program {
 		JOptionPane.showMessageDialog(null, "Output Complete");
 	}
 
-	private static void tryWriteNumbers(String filePath) {
-		try {
-			new NumbersFile(new FileWriter(new File(filePath)),
-					new RandomNumberString(new StringBuilder(), new Random())).write100RandomNumbers();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Error creatingfile");
-		}
-	}
 
 	private static void tryWriteToConsole(String filePath) {
 		// The StringBuffer class allows you to append to a string of characters
