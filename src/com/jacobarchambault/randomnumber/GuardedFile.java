@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-class GuardedRandomNumbersFile implements Writer {
-	RandomNumbersFile file;
+class GuardedFile implements Writer {
+	Writer file;
 
-	GuardedRandomNumbersFile(RandomNumbersFile file) {
+	GuardedFile(Writer file) {
 		this.file = file;
 	}
 
