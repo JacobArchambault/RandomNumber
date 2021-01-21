@@ -21,7 +21,7 @@ class RandomNumbersFile implements Writer {
 	}
 
 	@Override
-	public void write() throws IOException {
+	public void writeTo() throws IOException {
 		writer.write(numberString.generate());
 		writer.close();
 		showMessage();

@@ -11,9 +11,9 @@ class GuardedFile implements Writer {
 		this.file = file;
 	}
 
-	public void write() {
+	public void writeTo() {
 		try {
-			file.write();
+			file.writeTo();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Error creatingfile");
 		}
