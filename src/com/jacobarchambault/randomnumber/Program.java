@@ -18,13 +18,9 @@ public class Program {
 	public static void main(String[] args) throws IOException {
 		new GuardedNumbersFile(new NumbersFile(new FileWriter(new File("numbers.txt")),
 					new RandomNumberString(new StringBuilder(), new Random()))).tryWriteNumbers();
-		showMessage();
 		tryWriteToConsole("numbers.txt");
 	}
 
-	private static void showMessage() {
-		JOptionPane.showMessageDialog(null, "Output Complete");
-	}
 
 
 	private static void tryWriteToConsole(String filePath) {

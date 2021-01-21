@@ -3,6 +3,8 @@ package com.jacobarchambault.randomnumber;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 public class NumbersFile {
 
 	RandomNumberString numberString;
@@ -16,6 +18,10 @@ public class NumbersFile {
 	void write100RandomNumbers() throws IOException {
 		writer.write(numberString.generate());
 		writer.close();
+		showMessage();
+	}
+	private static void showMessage() {
+		JOptionPane.showMessageDialog(null, "Output Complete");
 	}
 
 
