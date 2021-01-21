@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-class RandomNumbersFile {
+class RandomNumbersFile implements Writer {
 
 	private static void showMessage() {
 		JOptionPane.showMessageDialog(null, "Output Complete");
@@ -20,7 +20,8 @@ class RandomNumbersFile {
 		numberString = string;
 	}
 
-	void write() throws IOException {
+	@Override
+	public void write() throws IOException {
 		writer.write(numberString.generate());
 		writer.close();
 		showMessage();
