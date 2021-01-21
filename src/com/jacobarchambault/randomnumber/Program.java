@@ -24,8 +24,7 @@ public class Program {
 		method1(file);
 
 		// notify the user that the download is complete.
-		JOptionPane.showMessageDialog(null,
-				"Output Complete");
+		showMessage();
 
 		method2(file);
 
@@ -77,5 +76,10 @@ public class Program {
 			System.out.println("Error reading the file" + ioe);
 		}
 		System.out.println(strContent);
+	}
+
+	private static void showMessage() {
+		JOptionPane.showMessageDialog(null,
+				"Output Complete");
 	}
 }
