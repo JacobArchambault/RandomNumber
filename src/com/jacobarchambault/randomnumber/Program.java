@@ -17,21 +17,19 @@ import javax.swing.JOptionPane;
 public class Program {
 
 	public static void main(String[] args) {
-		File file = new File(
+		File toFile = new File(
 				"numbers.txt");
 
-
-
-		tryOutputNumbers(file);
+		tryWriteNumbers(toFile);
 
 		// notify the user that the download is complete.
 		showMessage();
 
-		method2(file);
+		method2(toFile);
 
 	}
 
-	private static void tryOutputNumbers(File file) {
+	private static void tryWriteNumbers(File file) {
 		try {
 
 			write100RandomNumbers(file);
