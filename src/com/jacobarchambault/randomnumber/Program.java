@@ -21,7 +21,7 @@ public class Program {
 
 
 
-		method1(file);
+		tryOutputNumbers(file);
 
 		// notify the user that the download is complete.
 		showMessage();
@@ -30,7 +30,7 @@ public class Program {
 
 	}
 
-	private static void method1(File file) {
+	private static void tryOutputNumbers(File file) {
 		try {
 
 			output100RandomNumbers(file);
