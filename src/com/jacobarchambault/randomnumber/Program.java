@@ -72,10 +72,12 @@ public class Program {
 		// to be downloaded to
 		FileWriter writer = new FileWriter(toFile);
 		Random random = new Random();
+		StringBuilder stringBuilder = new StringBuilder();
 		// Generate 100 random numbers
 		for (int i = 0; i < 100; i++) {
-			writer.write(String.valueOf(random.nextInt())); // The %d formats to an integer				
+			stringBuilder.append(String.valueOf(random.nextInt()) + "\n");
 		}
+		writer.write(stringBuilder.toString());			
 		writer.close();
 	}
 
