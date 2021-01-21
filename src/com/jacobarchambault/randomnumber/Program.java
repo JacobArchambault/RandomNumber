@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Formatter;
 import java.util.Random;
@@ -65,21 +66,17 @@ public class Program {
 		System.out.println(strContent);
 	}
 
-	private static void output100RandomNumbers(File file) throws FileNotFoundException {
+	private static void output100RandomNumbers(File file) throws IOException {
 		// Construct a Formatter object that uses the FileOutputStream class to link to
 		// the text file
 		// to be downloaded to
-		Formatter output = new Formatter(
-				new FileOutputStream(
-						file,
-						true));
+		FileWriter writer = new FileWriter(file);
 		Random random = new Random();
 		// Generate 100 random numbers
 		for (int i = 0; i < 100; i++) {
-			output.format("%d",
-					(random.nextInt())); // The %d formats to an integer				
+			writer.write(String.valueOf(random.nextInt())); // The %d formats to an integer				
 		}
-		output.close();
+		writer.close();
 	}
 
 	private static void showMessage() {
