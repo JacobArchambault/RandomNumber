@@ -3,10 +3,8 @@ package com.jacobarchambault.randomnumber;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Formatter;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
@@ -27,6 +25,11 @@ public class Program {
 
 		tryWriteToConsole(toFile);
 
+	}
+
+	private static void showMessage() {
+		JOptionPane.showMessageDialog(null,
+				"Output Complete");
 	}
 
 	private static void tryWriteNumbers(File file) {
@@ -76,10 +79,5 @@ public class Program {
 		}
 		writer.write(stringBuilder.toString());			
 		writer.close();
-	}
-
-	private static void showMessage() {
-		JOptionPane.showMessageDialog(null,
-				"Output Complete");
 	}
 }
