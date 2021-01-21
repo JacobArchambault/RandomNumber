@@ -11,6 +11,7 @@ class MyConsole implements Medium {
 		this.filePath = filePath;
 	}
 
+	@Override
 	public void writeTo() throws IOException {
 		System.out.println(Files.readString(Paths.get(filePath)));
 	}

@@ -11,6 +11,7 @@ class GuardedFile implements Medium {
 		this.medium = medium;
 	}
 
+	@Override
 	public void writeTo() {
 		try {
 			medium.writeTo();
