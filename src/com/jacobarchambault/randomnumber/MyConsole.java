@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class MyConsole {
+class MyConsole {
 	String filePath;
-	public MyConsole(String filePath) {
+	MyConsole(String filePath) {
 		this.filePath = filePath;
 	}
 	void writeTo() throws IOException {

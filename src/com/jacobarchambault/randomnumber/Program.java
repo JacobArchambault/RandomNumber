@@ -18,7 +18,7 @@ public class Program {
 	public static void main(String[] args) throws IOException {
 		new GuardedNumbersFile(new NumbersFile(new FileWriter(new File("numbers.txt")),
 					new RandomNumberString(new StringBuilder(), new Random()))).tryWriteNumbers();
-		GuardedConsole.tryWriteToConsole("numbers.txt");
+		new GuardedConsole(new MyConsole("numbers.txt")).tryWriteToConsole();
 	}
 
 

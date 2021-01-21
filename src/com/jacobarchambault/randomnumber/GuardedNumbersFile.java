@@ -4,9 +4,9 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class GuardedNumbersFile {
+class GuardedNumbersFile {
 	NumbersFile file;
-	public GuardedNumbersFile(NumbersFile file) {
+	GuardedNumbersFile(NumbersFile file) {
 		this.file = file;
 	}
 	void tryWriteNumbers() {

@@ -5,11 +5,15 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class GuardedConsole {
-	static void tryWriteToConsole(String filePath) {
+class GuardedConsole {
+	MyConsole console;
+	GuardedConsole(MyConsole myConsole) {
+		console = myConsole;
+	}
+	void tryWriteToConsole() {
 		// The StringBuffer class allows you to append to a string of characters
 		try {
-			new MyConsole(filePath).writeTo();
+			console.writeTo();
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "File Not Found. Check the name of the file.");
 		} catch (IOException ioe) {

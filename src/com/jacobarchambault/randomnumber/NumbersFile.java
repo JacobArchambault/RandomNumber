@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class NumbersFile {
+class NumbersFile {
 
 	private static void showMessage() {
 		JOptionPane.showMessageDialog(null, "Output Complete");
@@ -14,7 +14,7 @@ public class NumbersFile {
 
 	FileWriter writer;
 
-	public NumbersFile(FileWriter writer, RandomNumberString string) {
+	NumbersFile(FileWriter writer, RandomNumberString string) {
 		this.writer = writer;
 		numberString = string;
 	}
