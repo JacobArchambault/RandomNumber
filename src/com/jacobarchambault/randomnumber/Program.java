@@ -21,8 +21,6 @@ public class Program {
 		tryWriteToConsole("numbers.txt");
 	}
 
-
-
 	private static void tryWriteToConsole(String filePath) {
 		// The StringBuffer class allows you to append to a string of characters
 		try {

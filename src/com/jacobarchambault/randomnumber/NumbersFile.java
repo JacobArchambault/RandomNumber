@@ -7,21 +7,21 @@ import javax.swing.JOptionPane;
 
 public class NumbersFile {
 
+	private static void showMessage() {
+		JOptionPane.showMessageDialog(null, "Output Complete");
+	}
 	RandomNumberString numberString;
+
 	FileWriter writer;
 
 	public NumbersFile(FileWriter writer, RandomNumberString string) {
 		this.writer = writer;
 		numberString = string;
 	}
-
 	void write100RandomNumbers() throws IOException {
 		writer.write(numberString.generate());
 		writer.close();
 		showMessage();
-	}
-	private static void showMessage() {
-		JOptionPane.showMessageDialog(null, "Output Complete");
 	}
 
 
