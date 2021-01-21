@@ -1,9 +1,7 @@
 package com.jacobarchambault.randomnumber;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -56,14 +54,7 @@ public class Program {
 		}
 	}
 
-	private static void writeToConsole(String filePath) throws IOException {
-		System.out.println(Files.readString(Paths.get(filePath)));
-	}
-
 	private static void write100RandomNumbers(File toFile) throws IOException {
-		// Construct a Formatter object that uses the FileOutputStream class to link to
-		// the text file
-		// to be downloaded to
 		FileWriter writer = new FileWriter(
 				toFile);
 		Random random = new Random();
@@ -75,5 +66,9 @@ public class Program {
 		writer.write(stringBuilder.toString());
 		// always close the stream
 		writer.close();
+	}
+
+	private static void writeToConsole(String filePath) throws IOException {
+		System.out.println(Files.readString(Paths.get(filePath)));
 	}
 }
