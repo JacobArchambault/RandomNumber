@@ -20,7 +20,6 @@ public class Program {
 				"numbers.txt");
 
 
-		// The StringBuffer class allows you to append to a string of characters
 
 		method1(file);
 
@@ -43,8 +42,8 @@ public class Program {
 	}
 
 	private static void method2(File file) {
-		StringBuffer strContent = new StringBuffer(
-				"");
+		// The StringBuffer class allows you to append to a string of characters
+		StringBuffer strContent = new StringBuffer();
 		FileInputStream fin;
 		try {
 			fin = new FileInputStream(
