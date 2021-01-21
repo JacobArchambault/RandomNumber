@@ -33,28 +33,30 @@ public class Program {
 
 	private static void method1(File file) {
 		try {
-			// Construct a Formatter object that uses the FileOutputStream class to link to
-			// the text file
-			// to be downloaded to
-			Formatter output = new Formatter(
-					new FileOutputStream(
-							file,
-							true));
 
-			Random random = new Random();
-			// Generate 100 random numbers
-			for (int i = 0; i < 100; i++) {
-				output.format("%d",
-						(random.nextInt())); // The %d formats to an integer
-
-				
-			}
+			output100RandomNumbers(file);
 			// always close the stream
-			output.close();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null,
 					"Error creatingfile");
 		}
+	}
+
+	private static void output100RandomNumbers(File file) throws FileNotFoundException {
+		// Construct a Formatter object that uses the FileOutputStream class to link to
+		// the text file
+		// to be downloaded to
+		Formatter output = new Formatter(
+				new FileOutputStream(
+						file,
+						true));
+		Random random = new Random();
+		// Generate 100 random numbers
+		for (int i = 0; i < 100; i++) {
+			output.format("%d",
+					(random.nextInt())); // The %d formats to an integer				
+		}
+		output.close();
 	}
 
 	private static void method2(File file) {
