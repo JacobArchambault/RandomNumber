@@ -4,10 +4,10 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-class GuardedFile implements Medium {
+class GuardedMedium implements Medium {
 	Medium medium;
 
-	GuardedFile(Medium medium) {
+	GuardedMedium(Medium medium) {
 		this.medium = medium;
 	}
 
@@ -15,8 +15,8 @@ class GuardedFile implements Medium {
 	public void writeTo() {
 		try {
 			medium.writeTo();
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Error creatingfile");
+		} catch (IOException ioe) {
+			System.out.println("Error reading the medium" + ioe);
 		}
 	}
 
