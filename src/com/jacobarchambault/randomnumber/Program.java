@@ -54,13 +54,13 @@ public class Program {
 			}
 			// close the stream
 			fin.close();
+			System.out.println(strContent);
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null,
 					"File Not Found. Check the name of the file.");
 		} catch (IOException ioe) {
 			System.out.println("Error reading the file" + ioe);
 		}
-		System.out.println(strContent);
 	}
 
 	private static void write100RandomNumbers(File toFile) throws IOException {
