@@ -24,7 +24,7 @@ public class Program {
 	private static void tryWriteToConsole(String filePath) {
 		// The StringBuffer class allows you to append to a string of characters
 		try {
-			writeToConsole(filePath);
+			MyConsole.writeToConsole(filePath);
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "File Not Found. Check the name of the file.");
 		} catch (IOException ioe) {
@@ -32,7 +32,4 @@ public class Program {
 		}
 	}
 
-	private static void writeToConsole(String filePath) throws IOException {
-		System.out.println(Files.readString(Paths.get(filePath)));
-	}
 }
