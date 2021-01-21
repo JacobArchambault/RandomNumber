@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Random;
 
 import javax.swing.JOptionPane;
 
@@ -21,17 +22,15 @@ public class Program {
 	}
 
 	private static void showMessage() {
-		JOptionPane.showMessageDialog(null,
-				"Output Complete");
+		JOptionPane.showMessageDialog(null, "Output Complete");
 	}
 
 	private static void tryWriteNumbers(String filePath) {
 		try {
-			new NumbersFile(new FileWriter(new File(
-				filePath))).write100RandomNumbers();;
+			new NumbersFile(new FileWriter(new File(filePath)),
+					new RandomNumberString(new StringBuilder(), new Random())).write100RandomNumbers();
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null,
-					"Error creatingfile");
+			JOptionPane.showMessageDialog(null, "Error creatingfile");
 		}
 	}
 
@@ -40,8 +39,7 @@ public class Program {
 		try {
 			writeToConsole(filePath);
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null,
-					"File Not Found. Check the name of the file.");
+			JOptionPane.showMessageDialog(null, "File Not Found. Check the name of the file.");
 		} catch (IOException ioe) {
 			System.out.println("Error reading the file" + ioe);
 		}
