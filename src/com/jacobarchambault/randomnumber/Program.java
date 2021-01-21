@@ -34,7 +34,7 @@ public class Program {
 	private static void tryOutputNumbers(File file) {
 		try {
 
-			output100RandomNumbers(file);
+			write100RandomNumbers(file);
 			// always close the stream
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null,
@@ -66,11 +66,11 @@ public class Program {
 		System.out.println(strContent);
 	}
 
-	private static void output100RandomNumbers(File file) throws IOException {
+	private static void write100RandomNumbers(File toFile) throws IOException {
 		// Construct a Formatter object that uses the FileOutputStream class to link to
 		// the text file
 		// to be downloaded to
-		FileWriter writer = new FileWriter(file);
+		FileWriter writer = new FileWriter(toFile);
 		Random random = new Random();
 		// Generate 100 random numbers
 		for (int i = 0; i < 100; i++) {
