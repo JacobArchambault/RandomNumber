@@ -13,7 +13,7 @@ public class Program {
 	public static void main(String[] args) throws IOException {
 		new GuardedMedium(new RandomNumbersFile(new FileWriter(new File("numbers.txt")),
 				new RandomNumberString(new StringBuilder(), new Random()))).writeTo();
-		new GuardedConsole(new MyConsole("numbers.txt")).tryWriteToConsole();
+		new GuardedMedium(new MyConsole("numbers.txt")).writeTo();
 	}
 
 }
