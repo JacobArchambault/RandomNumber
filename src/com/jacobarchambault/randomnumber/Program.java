@@ -10,7 +10,8 @@ import java.util.Random;
  */
 public class Program {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(
+			String[] args) throws IOException {
 		new GuardedMedium(
 				new RandomNumbersFile(
 						new FileWriter(
