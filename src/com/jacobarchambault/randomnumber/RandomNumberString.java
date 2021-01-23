@@ -2,7 +2,7 @@ package com.jacobarchambault.randomnumber;
 
 import java.util.Random;
 
-public class RandomNumberString {
+public class RandomNumberString implements Product{
 	Random random;
 	StringBuilder stringBuilder;
 
@@ -13,7 +13,7 @@ public class RandomNumberString {
 		this.random = random;
 	}
 
-	String generate() {
+	public String generate() {
 		// Generate 100 random numbers
 		for (int i = 1; i <= 100; i++) {
 			System.out.println(
