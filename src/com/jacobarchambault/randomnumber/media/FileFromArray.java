@@ -20,12 +20,12 @@ public class FileFromArray implements Medium {
 	@Override
 	public void writeTo() throws IOException {
 		int[] myArray = array.generate();
-		for (int i = 0; i < myArray.length; i++) {
+		for (int i = 1; i <= myArray.length; i++) {
 			System.out.println(
-					"Writing #" + (i) + " to file");
+					"Writing #" + (i) + " to file from array");
 			writer.write(
 					String.valueOf(
-							myArray[i]) + "\n");
+							myArray[i - 1]) + "\n");
 		}
 		writer.close();
 	}

@@ -17,7 +17,7 @@ public class RandomNumberString implements Product<String> {
 		// Generate 100 random numbers
 		for (int i = 1; i <= 100; i++) {
 			System.out.println(
-					"Writing #" + i);
+					"Writing #" + i + " with StringBuilder");
 			stringBuilder.append(
 					String.valueOf(
 							random.nextInt()) + "\n");

@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import com.jacobarchambault.randomnumber.products.RandomNumberString;
+import com.jacobarchambault.randomnumber.products.Product;
 
 public class RandomNumbersFile implements Medium {
 
@@ -15,13 +15,13 @@ public class RandomNumbersFile implements Medium {
 				"Output Complete");
 	}
 
-	RandomNumberString numberString;
+	Product<String> numberString;
 
 	FileWriter writer;
 
 	public RandomNumbersFile(
 			FileWriter writer,
-			RandomNumberString string) {
+			Product<String> string) {
 		this.writer = writer;
 		numberString = string;
 	}
