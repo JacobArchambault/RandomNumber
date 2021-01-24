@@ -2,7 +2,7 @@ package com.jacobarchambault.randomnumber;
 
 import java.util.Random;
 
-public class RandomNumberString implements Product{
+public class RandomNumberString implements Product<String>{
 	Random random;
 	StringBuilder stringBuilder;
 

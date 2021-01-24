@@ -2,7 +2,7 @@ package com.jacobarchambault.randomnumber;
 
 import java.util.Random;
 
-public class RandomNumberArray implements Product{
+public class RandomNumberArray implements Product<int[]>{
 
 	Random random;
 	
