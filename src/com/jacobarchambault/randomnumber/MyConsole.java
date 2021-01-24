@@ -3,21 +3,24 @@ package com.jacobarchambault.randomnumber;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 class MyConsole implements Medium {
-	String filePath;
 
+	Scanner scanner;
 	MyConsole(
-			String filePath) {
-		this.filePath = filePath;
+			Scanner scanner) {
+		this.scanner = scanner;
 	}
 
 	@Override
 	public void writeTo() throws IOException {
-		System.out.println(
-				Files.readString(
-						Paths.get(
-								filePath)));
+		int lineNumber = 1;
+		while (scanner.hasNext()) {
+			System.out.println("Reading line number " + lineNumber + ": " + scanner.nextLine());			
+			lineNumber++;
+		}
+		scanner.close();
 	}
 
 }

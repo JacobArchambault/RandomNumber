@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
+import java.util.Scanner;
 
 /*  Purpose:  Demonstrate the Formatter, FileInputStream, File, FileOutputStream, 
  *  StringBuffer classes.
@@ -33,7 +34,9 @@ public class Program {
 
 		new GuardedMedium(
 				new MyConsole(
-						"numbers.txt")).writeTo();
+						new Scanner(
+								new File(
+										"numbers.txt")))).writeTo();
 	}
 
 }
