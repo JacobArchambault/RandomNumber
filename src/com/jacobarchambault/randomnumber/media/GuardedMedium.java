@@ -1,11 +1,11 @@
-package com.jacobarchambault.randomnumber;
+package com.jacobarchambault.randomnumber.media;
 
 import java.io.IOException;
 
-class GuardedMedium implements Medium {
+public class GuardedMedium implements Medium {
 	Medium medium;
 
-	GuardedMedium(
+	public GuardedMedium(
 			Medium medium) {
 		this.medium = medium;
 	}

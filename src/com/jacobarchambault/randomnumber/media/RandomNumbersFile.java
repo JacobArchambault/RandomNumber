@@ -1,11 +1,13 @@
-package com.jacobarchambault.randomnumber;
+package com.jacobarchambault.randomnumber.media;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-class RandomNumbersFile implements Medium {
+import com.jacobarchambault.randomnumber.products.RandomNumberString;
+
+public class RandomNumbersFile implements Medium {
 
 	private static void showMessage() {
 		JOptionPane.showMessageDialog(
@@ -17,7 +19,7 @@ class RandomNumbersFile implements Medium {
 
 	FileWriter writer;
 
-	RandomNumbersFile(
+	public RandomNumbersFile(
 			FileWriter writer,
 			RandomNumberString string) {
 		this.writer = writer;

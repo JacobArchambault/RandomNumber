@@ -9,6 +9,13 @@ import java.util.Scanner;
 /*  Purpose:  Demonstrate the Formatter, FileInputStream, File, FileOutputStream, 
  *  StringBuffer classes.
  */
+import com.jacobarchambault.randomnumber.media.FileFromArray;
+import com.jacobarchambault.randomnumber.media.GuardedMedium;
+import com.jacobarchambault.randomnumber.media.MyConsole;
+import com.jacobarchambault.randomnumber.media.RandomNumbersFile;
+import com.jacobarchambault.randomnumber.products.RandomNumberArray;
+import com.jacobarchambault.randomnumber.products.RandomNumberString;
+
 public class Program {
 
 	public static void main(

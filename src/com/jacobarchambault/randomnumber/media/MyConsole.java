@@ -1,12 +1,13 @@
-package com.jacobarchambault.randomnumber;
+package com.jacobarchambault.randomnumber.media;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-class MyConsole implements Medium {
+public class MyConsole implements Medium {
 
 	Scanner scanner;
-	MyConsole(
+
+	public MyConsole(
 			Scanner scanner) {
 		this.scanner = scanner;
 	}
@@ -15,7 +16,8 @@ class MyConsole implements Medium {
 	public void writeTo() throws IOException {
 		int lineNumber = 1;
 		while (scanner.hasNext()) {
-			System.out.println("Reading line number " + lineNumber + ": " + scanner.nextLine());			
+			System.out.println(
+					"Reading line number " + lineNumber + ": " + scanner.nextLine());
 			lineNumber++;
 		}
 		scanner.close();

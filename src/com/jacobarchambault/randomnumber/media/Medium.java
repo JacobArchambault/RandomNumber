@@ -1,4 +1,4 @@
-package com.jacobarchambault.randomnumber;
+package com.jacobarchambault.randomnumber.media;
 
 import java.io.IOException;
 

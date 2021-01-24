@@ -1,8 +1,8 @@
-package com.jacobarchambault.randomnumber;
+package com.jacobarchambault.randomnumber.products;
 
 import java.util.Random;
 
-public class RandomNumberString implements Product<String>{
+public class RandomNumberString implements Product<String> {
 	Random random;
 	StringBuilder stringBuilder;
 
